@@ -3,8 +3,8 @@ import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const navigation = [
   { name: "Tienda", href: "/tienda", current: false },
-  { name: "Quienes somos?", href: "contactanos", current: false },
-  { name: "contactanos", href: "/contactanos", current: false },
+  { name: "Quienes somos?", href: "sobre-nosotros", current: false },
+  { name: "contactanos", href: "contactanos", current: false },
 ];
 
 function classNames(...classes) {
@@ -35,7 +35,7 @@ export default function Example() {
                 <a href="/">
                   <img
                     className="block h-24 w-auto lg:hidden"
-                    src="../public/aereal-logo.png"
+                    src="/aereal-logo.png"
                     alt="Your Company"
                   />
                 </a>
