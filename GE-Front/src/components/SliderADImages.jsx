@@ -18,32 +18,16 @@ export default function SliderADImages() {
     <div className="overflow-hidden pointer-events-none">
       <Slider {...settings}>
         <div className="">
-          <img
-            className="w-full"
-            src="../public/merca-1.webp"
-            alt="imagen 1 merca"
-          />
+          <img className="w-full" src="/merca-1.webp" alt="imagen 1 merca" />
         </div>
         <div>
-          <img
-            className="w-full"
-            src="../public/merca-2.webp"
-            alt="imgen 2 merca"
-          />
+          <img className="w-full" src="/merca-2.webp" alt="imgen 2 merca" />
         </div>
         <div>
-          <img
-            className="w-full"
-            src="../public/Merca-3.webp"
-            alt="imagen 3 merca"
-          />
+          <img className="w-full" src="/Merca-3.webp" alt="imagen 3 merca" />
         </div>
         <div>
-          <img
-            className="w-full"
-            src="../public/merca-4.webp"
-            alt="imagen 4 merca"
-          />
+          <img className="w-full" src="/merca-4.webp" alt="imagen 4 merca" />
         </div>
       </Slider>
     </div>

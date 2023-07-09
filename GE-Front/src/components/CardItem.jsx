@@ -1,6 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function CardItem() {
+  const navigate = useNavigate();
+
   const product = [
     {
       name: "Galaxy A04",
@@ -17,12 +20,13 @@ function CardItem() {
         {product.map((item) => (
           <div
             key={item.name}
+            onClick={() => navigate("/single-page")}
             className=" cursor-pointer hover:shadow-2xl pointer hover:bg-gray-200 flex flex-col justify-center items-start border border-gray-300 p-3 rounded"
           >
             <div className="flex justify-center items-center self-center w-full border-b  border-b-gray-300">
               <img
                 className="w-2/6 h-auto justify-self-center"
-                src="../public/telefono-prueba.png"
+                src="/telefono-prueba.png"
                 alt="imagen telefono samsung A04"
               />
             </div>
