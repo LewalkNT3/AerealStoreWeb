@@ -1,9 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import SliderADImages from "../components/SliderADImages";
 import CardItem from "../components/CardItem";
 import BrandsUsageCards from "../components/BrandsUsageCards";
+import fetchData from "../API/MLProductos.api";
 
 export default function MainProductsPage() {
+  useEffect(() => {
+    const fetchDataFromAPI = async () => {
+      try {
+        await fetchData();
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    fetchDataFromAPI();
+  }, []);
+
   return (
     <>
       <main className="overflow-hidden">
