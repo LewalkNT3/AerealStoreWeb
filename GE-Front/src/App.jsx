@@ -5,6 +5,7 @@ import MainProductsPage from "./pages/MainProductsPage";
 import Header from "./components/header";
 import FooterSection from "./components/footer";
 import SingleProductsPage from "./pages/SingleProudctsPage";
+import AboutUs from "./pages/AboutUs";
 
 function App() {
   return (
@@ -14,7 +15,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/tienda" element={<MainProductsPage />} />
-          <Route path="/single-page" element={<SingleProductsPage />} />
+          <Route path="/products/:id" element={<SingleProductsPage />} />
+          <Route path="/sobre-nosotros" element={<AboutUs />} />
         </Routes>
         <FooterSection />
       </BrowserRouter>

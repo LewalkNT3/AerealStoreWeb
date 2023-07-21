@@ -8,7 +8,7 @@ import {
 const navigation = [
   { name: "Tienda", href: "/tienda", current: false },
   { name: "Quienes somos?", href: "sobre-nosotros", current: false },
-  { name: "contactanos", href: "contactanos", current: false },
+  // { name: "contactanos", href: "contactanos", current: false },
 ];
 
 function classNames(...classes) {
@@ -19,7 +19,7 @@ export default function Header() {
   return (
     <Disclosure
       as="nav"
-      className="bg-gray-800 border-b-2 border-black backdrop-filter backdrop-blur-sm"
+      className="bg-gray-950 border-b-2 border-black backdrop-filter backdrop-blur-sm"
     >
       {({ open }) => (
         <>
@@ -77,14 +77,13 @@ export default function Header() {
                   type="button"
                   className="rounded-full bg-transparent  w-[96px] text-gray-400 hover:text-white focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-950"
                 >
-                  <span className="sr-only">View notifications</span>
-                  <UserCircleIcon
-                    aria-hidden="true"
-                    className="
-                    h-8
-                    w-8
-                    text-white"
-                  />
+                  <a href="https://www.instagram.com/aereal.store/">
+                    <img
+                      className="w-6 h-6"
+                      src="/IGLogo.png"
+                      alt="logo instagram footer"
+                    />
+                  </a>
                 </button>
               </div>
             </div>

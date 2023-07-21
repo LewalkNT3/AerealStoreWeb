@@ -9,10 +9,11 @@ const fetchData = async () => {
                 Authorization: `Bearer ${accesToken}`
             }
         });
-        console.log(response.data);
+        console.log(response.data.results)
+        return response.data.results;
     } catch (error) {
         console.log(error)
     } 
 }
 
-export default fetchData
+export default fetchData;

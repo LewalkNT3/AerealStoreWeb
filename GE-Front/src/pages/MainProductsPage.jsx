@@ -1,44 +1,26 @@
-import React, { useEffect } from "react";
 import SliderADImages from "../components/SliderADImages";
 import CardItem from "../components/CardItem";
 import BrandsUsageCards from "../components/BrandsUsageCards";
-import fetchData from "../API/MLProductos.api";
 
 export default function MainProductsPage() {
-  useEffect(() => {
-    const fetchDataFromAPI = async () => {
-      try {
-        await fetchData();
-      } catch (error) {
-        console.log(error);
-      }
-    };
-
-    fetchDataFromAPI();
-  }, []);
-
   return (
     <>
       <main className="overflow-hidden">
         <div>
           <SliderADImages />
         </div>
-        <div className="mx-20">
+        <div className="">
           <section className="flex flex-col">
-            <div className="flex flex-row gap-3 ml-3 mt-3 pb-3 items-center">
-              <h3 className="text-2xl font-light">Ofertas</h3>
-              <a
-                href="#"
-                className="pt-1 text-blue-500 hover:underline transition-all ease-out"
-              >
-                Ver todas
-              </a>
-            </div>
-            <div className="flex flex-row flex-shrink-2 justify-between m-4 mt-0">
-              <CardItem />
-              <CardItem />
-              <CardItem />
-              <CardItem />
+            <div className="flex flex-col flex-shrink-2 justify-between m-4 mt-0">
+              <div className="flex flex-row gap-3 ml-3 mt-3 pb-3 items-center">
+                <h3 className="text-2xl font-light">Ofertas</h3>
+                <a
+                  href="#"
+                  className="pt-1 text-blue-500 hover:underline transition-all ease-out"
+                >
+                  Ver todas
+                </a>
+              </div>
               <CardItem />
             </div>
           </section>
@@ -55,25 +37,6 @@ export default function MainProductsPage() {
                 <BrandsUsageCards />
                 <BrandsUsageCards />
               </div>
-            </div>
-          </section>
-
-          <section className="flex flex-col">
-            <div className="flex flex-row gap-3 ml-3 mt-3 pb-3 items-center">
-              <h3 className="text-2xl font-light">Ofertas</h3>
-              <a
-                href="#"
-                className="pt-1 text-blue-500 hover:underline transition-all ease-out"
-              >
-                Ver todas
-              </a>
-            </div>
-            <div className="flex flex-row flex-shrink-2 justify-between m-4 mt-0">
-              <CardItem />
-              <CardItem />
-              <CardItem />
-              <CardItem />
-              <CardItem />
             </div>
           </section>
         </div>
